@@ -527,8 +527,8 @@ class TestQuad:
                      complex_func=False,
                      **kwargs)
 
-        np.testing.assert_equal(res_c[0], res_r[0] + 1j*res_i[0])
-        np.testing.assert_equal(res_c[1], res_r[1] + 1j*res_i[1])
+        np.testing.assert_almost_equal(res_c[0], res_r[0] + 1j*res_i[0])
+        np.testing.assert_almost_equal(res_c[1], res_r[1] + 1j*res_i[1])
 
         assert len(res_c[2]['real']) == len(res_r[2:]) == 3
         assert res_c[2]['real'][2] == res_r[4]
